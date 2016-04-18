@@ -228,7 +228,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBR-Rg-HTQ">
-                                <rect key="frame" x="178" y="591" width="74" height="21"/>
+                                <rect key="frame" x="178" y="591" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -243,7 +243,6 @@
                         <outlet property="yAcc" destination="tUv-UF-wSf" id="FGR-cT-STL"/>
                         <outlet property="yRot" destination="iDg-ma-1NX" id="xCH-J6-wWO"/>
                         <outlet property="zAcc" destination="HTk-pk-Ltj" id="TgO-XH-wux"/>
-                        <outlet property="zRot" destination="XBR-Rg-HTQ" id="2uc-eK-ORq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVa-k2-Tk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -339,7 +338,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-tT-8CM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="fbW-Fu-dre"/>
+                                    <navigationItem title="Shift" id="fbW-Fu-dre"/>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_white" translatesAutoresizingMaskIntoConstraints="NO" id="1VS-wX-MLW">
@@ -401,7 +400,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTh-PR-KCr">
                                 <rect key="frame" x="84" y="244" width="209" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shift_Logo_White" translatesAutoresizingMaskIntoConstraints="NO" id="T6V-6K-pm8">
                                 <rect key="frame" x="95" y="90" width="185" height="99"/>
