@@ -13,6 +13,12 @@
 		2B4DE9BC1CADAC7D00D505D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4DE9BB1CADAC7D00D505D9 /* Assets.xcassets */; };
 		2B4DE9BF1CADAC7D00D505D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4DE9BD1CADAC7D00D505D9 /* LaunchScreen.storyboard */; };
 		2B4DE9CA1CADAC7D00D505D9 /* ShiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9C91CADAC7D00D505D9 /* ShiftTests.swift */; };
+		2B4DE9D81CADAD1200D505D9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9D71CADAD1200D505D9 /* SWRevealViewController.m */; };
+		2B4DE9DC1CADB32800D505D9 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9DB1CADB32800D505D9 /* MenuController.swift */; };
+		2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FAB81CC54F57002B3D88 /* Exercises.swift */; };
+		2B80FABB1CC54FE8002B3D88 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABA1CC54FE8002B3D88 /* Data.swift */; };
+		2B80FABD1CC55009002B3D88 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABC1CC55009002B3D88 /* Settings.swift */; };
+		2B80FABF1CC55955002B3D88 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B80FABE1CC55955002B3D88 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,14 @@
 		2B4DE9C51CADAC7D00D505D9 /* ShiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4DE9C91CADAC7D00D505D9 /* ShiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTests.swift; sourceTree = "<group>"; };
 		2B4DE9CB1CADAC7D00D505D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B4DE9D51CADACFB00D505D9 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2B4DE9D61CADAD1100D505D9 /* Shift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shift-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B4DE9D71CADAD1200D505D9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2B4DE9DB1CADB32800D505D9 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../MenuController.swift; sourceTree = "<group>"; };
+		2B80FAB81CC54F57002B3D88 /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
+		2B80FABA1CC54FE8002B3D88 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2B80FABC1CC55009002B3D88 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		2B80FABE1CC55955002B3D88 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B80FABF1CC55955002B3D88 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +74,7 @@
 		2B4DE9A81CADAC7C00D505D9 = {
 			isa = PBXGroup;
 			children = (
+				2B80FABE1CC55955002B3D88 /* CoreMotion.framework */,
 				2B4DE9B31CADAC7D00D505D9 /* Shift */,
 				2B4DE9C81CADAC7D00D505D9 /* ShiftTests */,
 				2B4DE9B21CADAC7C00D505D9 /* Products */,
@@ -77,12 +93,18 @@
 		2B4DE9B31CADAC7D00D505D9 /* Shift */ = {
 			isa = PBXGroup;
 			children = (
+				2B4DE9DA1CADAD3300D505D9 /* SWRevealViewController */,
 				2B4DE9B41CADAC7D00D505D9 /* AppDelegate.swift */,
 				2B4DE9B61CADAC7D00D505D9 /* ViewController.swift */,
+				2B4DE9DB1CADB32800D505D9 /* MenuController.swift */,
 				2B4DE9B81CADAC7D00D505D9 /* Main.storyboard */,
+				2B80FAB81CC54F57002B3D88 /* Exercises.swift */,
+				2B80FABA1CC54FE8002B3D88 /* Data.swift */,
+				2B80FABC1CC55009002B3D88 /* Settings.swift */,
 				2B4DE9BB1CADAC7D00D505D9 /* Assets.xcassets */,
 				2B4DE9BD1CADAC7D00D505D9 /* LaunchScreen.storyboard */,
 				2B4DE9C01CADAC7D00D505D9 /* Info.plist */,
+				2B4DE9D61CADAD1100D505D9 /* Shift-Bridging-Header.h */,
 			);
 			path = Shift;
 			sourceTree = "<group>";
@@ -94,6 +116,15 @@
 				2B4DE9CB1CADAC7D00D505D9 /* Info.plist */,
 			);
 			path = ShiftTests;
+			sourceTree = "<group>";
+		};
+		2B4DE9DA1CADAD3300D505D9 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B4DE9D51CADACFB00D505D9 /* SWRevealViewController.h */,
+				2B4DE9D71CADAD1200D505D9 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4DE9B71CADAC7D00D505D9 /* ViewController.swift in Sources */,
+				2B80FABB1CC54FE8002B3D88 /* Data.swift in Sources */,
 				2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */,
+				2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */,
+				2B80FABD1CC55009002B3D88 /* Settings.swift in Sources */,
+				2B4DE9DC1CADB32800D505D9 /* MenuController.swift in Sources */,
+				2B4DE9D81CADAD1200D505D9 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,10 +367,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Shift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmoore.Shift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shift/Shift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,10 +381,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Shift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmoore.Shift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shift/Shift-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -392,6 +433,7 @@
 				2B4DE9D01CADAC7D00D505D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B4DE9D11CADAC7D00D505D9 /* Build configuration list for PBXNativeTarget "ShiftTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +442,7 @@
 				2B4DE9D31CADAC7D00D505D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
