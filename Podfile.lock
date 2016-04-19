@@ -1,0 +1,13 @@
+PODS:
+  - Firebase (2.5.1)
+  - SwiftValidator (3.0.1)
+
+DEPENDENCIES:
+  - Firebase (~> 2.5)
+  - SwiftValidator (= 3.0.1)
+
+SPEC CHECKSUMS:
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  SwiftValidator: c59223144754045d7691febdc3b3ecc2e73b609c
+
+COCOAPODS: 0.39.0
