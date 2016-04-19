@@ -8,37 +8,41 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>Pods-Shift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftValidator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>49B0914F3D40D1EF3E9E7D51AB12B1CB</key>
+		<key>3630CACF2AD528987C9E3C5E40979AA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9803F348CCBE5328D99D82DDEAFC7FC8</key>
+		<key>531A8CFF260AD890CB1DF8256E17AF21</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B7AC9326D819482593FE118E915409D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0B8F1466CB6C999F812C91E5AE6C4C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

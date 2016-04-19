@@ -5,7 +5,8 @@ platform :ios, '8.0'
 
 target 'Shift' do
   pod 'Firebase', '~> 2.5'
-  pod 'SwiftValidator', '3.0.1' 
+  pod 'SwiftValidator', '3.0.1'
+  pod 'SCLAlertView'
 end
 
 target 'ShiftTests' do

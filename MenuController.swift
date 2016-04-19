@@ -15,6 +15,7 @@ class MenuController: UITableViewController {
     override func viewDidLoad() {
         
         TableArray = ["Home","Exercises","Data", "Settings", "Logout"]
+
     
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,6 +29,12 @@ class MenuController: UITableViewController {
         
         cell.textLabel?.text = TableArray[indexPath.row]
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "logout"){
+            LoginServices.sharedInstance.logout()
+        }
     }
     
     
