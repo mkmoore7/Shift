@@ -19,6 +19,9 @@ class Exercises: UIViewController {
     @IBOutlet weak var yRot: UILabel!
     @IBOutlet weak var zRot: UILabel!
 
+    @IBOutlet weak var cursor: UIImageView!
+    @IBOutlet weak var target: UIImageView!
+    @IBOutlet weak var sets: UILabel!
     
     var motionManager = CMMotionManager()
     
@@ -43,7 +46,10 @@ class Exercises: UIViewController {
                 print("\(NSError)")
             }
         })
-        
+        if(motionManager.accelerometerData != nil){
+            moveCursor(motionManager.accelerometerData!)
+        }
+
         super.viewDidLoad()
         
     }
@@ -58,6 +64,21 @@ class Exercises: UIViewController {
         xRot?.text = "\(gyro.x).2fg"
         yRot?.text = "\(gyro.y).2fg"
         zRot?.text = "\(gyro.z).2fg"
+    }
+    
+    func moveCursor(acceleration: CMAccelerometerData){
+        
+        
+        let toPoint: CGPoint = CGPointMake(0.0, -10.0)
+        let fromPoint : CGPoint = cursor.frame.origin
+        
+        let movement = CABasicAnimation(keyPath: "position")
+        movement.additive = true
+        movement.fromValue =  NSValue(CGPoint: fromPoint)
+        movement.toValue =  NSValue(CGPoint: toPoint)
+        movement.duration = 0.3
+        
+        view.layer.addAnimation(movement, forKey: "move")
     }
     
     

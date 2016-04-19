@@ -1,21 +1,19 @@
 //
-//  MenuController.swift
+//  SettingsVC.swift
 //  Shift
 //
-//  Created by Meredith Moore on 3/31/16.
+//  Created by Meredith Moore on 4/19/16.
 //  Copyright © 2016 Meredith Moore. All rights reserved.
 //
 
 import Foundation
-
-class MenuController: UITableViewController {
-    
+class SettingsVC: UIViewController {
     var TableArray = [String]()
     
     override func viewDidLoad() {
         
-        TableArray = ["Home","Exercises","Data", "Settings", "Logout"]
-    
+        TableArray = ["Home","Accerometer","Vibration", "Notifcations", "Sound"]
+        
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TableArray.count
@@ -29,6 +27,4 @@ class MenuController: UITableViewController {
         cell.textLabel?.text = TableArray[indexPath.row]
         return cell
     }
-    
-    
 }

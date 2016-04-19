@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1610251CC694BC00FB1710 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1610241CC694BC00FB1710 /* LoginVC.swift */; };
 		2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9B41CADAC7D00D505D9 /* AppDelegate.swift */; };
 		2B4DE9B71CADAC7D00D505D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9B61CADAC7D00D505D9 /* ViewController.swift */; };
 		2B4DE9BA1CADAC7D00D505D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4DE9B81CADAC7D00D505D9 /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		2B4DE9DC1CADB32800D505D9 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9DB1CADB32800D505D9 /* MenuController.swift */; };
 		2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FAB81CC54F57002B3D88 /* Exercises.swift */; };
 		2B80FABB1CC54FE8002B3D88 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABA1CC54FE8002B3D88 /* Data.swift */; };
-		2B80FABD1CC55009002B3D88 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABC1CC55009002B3D88 /* Settings.swift */; };
 		2B80FABF1CC55955002B3D88 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B80FABE1CC55955002B3D88 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B1610241CC694BC00FB1710 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ../LoginVC.swift; sourceTree = "<group>"; };
 		2B4DE9B11CADAC7C00D505D9 /* Shift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4DE9B41CADAC7D00D505D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B4DE9B61CADAC7D00D505D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		2B4DE9DB1CADB32800D505D9 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../MenuController.swift; sourceTree = "<group>"; };
 		2B80FAB81CC54F57002B3D88 /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		2B80FABA1CC54FE8002B3D88 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		2B80FABC1CC55009002B3D88 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2B80FABE1CC55955002B3D88 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -95,12 +95,12 @@
 			children = (
 				2B4DE9DA1CADAD3300D505D9 /* SWRevealViewController */,
 				2B4DE9B41CADAC7D00D505D9 /* AppDelegate.swift */,
-				2B4DE9B61CADAC7D00D505D9 /* ViewController.swift */,
-				2B4DE9DB1CADB32800D505D9 /* MenuController.swift */,
-				2B4DE9B81CADAC7D00D505D9 /* Main.storyboard */,
-				2B80FAB81CC54F57002B3D88 /* Exercises.swift */,
 				2B80FABA1CC54FE8002B3D88 /* Data.swift */,
-				2B80FABC1CC55009002B3D88 /* Settings.swift */,
+				2B80FAB81CC54F57002B3D88 /* Exercises.swift */,
+				2B1610241CC694BC00FB1710 /* LoginVC.swift */,
+				2B4DE9DB1CADB32800D505D9 /* MenuController.swift */,
+				2B4DE9B61CADAC7D00D505D9 /* ViewController.swift */,
+				2B4DE9B81CADAC7D00D505D9 /* Main.storyboard */,
 				2B4DE9BB1CADAC7D00D505D9 /* Assets.xcassets */,
 				2B4DE9BD1CADAC7D00D505D9 /* LaunchScreen.storyboard */,
 				2B4DE9C01CADAC7D00D505D9 /* Info.plist */,
@@ -232,9 +232,9 @@
 			files = (
 				2B4DE9B71CADAC7D00D505D9 /* ViewController.swift in Sources */,
 				2B80FABB1CC54FE8002B3D88 /* Data.swift in Sources */,
+				2B1610251CC694BC00FB1710 /* LoginVC.swift in Sources */,
 				2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */,
 				2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */,
-				2B80FABD1CC55009002B3D88 /* Settings.swift in Sources */,
 				2B4DE9DC1CADB32800D505D9 /* MenuController.swift in Sources */,
 				2B4DE9D81CADAD1200D505D9 /* SWRevealViewController.m in Sources */,
 			);
