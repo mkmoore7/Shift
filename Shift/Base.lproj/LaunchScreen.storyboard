@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,18 +12,35 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                        <viewControllerLayoutGuide type="top" id="Buf-nx-dFT"/>
+                        <viewControllerLayoutGuide type="bottom" id="k8s-c0-7Wv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="dUJ-pS-vb4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Launch" translatesAutoresizingMaskIntoConstraints="NO" id="yjp-hD-f0U">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-UN-AiK">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-1r-osa">
+                                <rect key="frame" x="38" y="185" width="298" height="298"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gJp-1r-osa" secondAttribute="height" multiplier="1:1" id="2WL-8I-NYJ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.25064777885369127" green="0.54255670547718127" blue="0.97145029362415991" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="gJp-1r-osa" secondAttribute="trailing" constant="22" id="9ao-we-U04"/>
+                            <constraint firstItem="gJp-1r-osa" firstAttribute="centerX" secondItem="dUJ-pS-vb4" secondAttribute="centerX" id="B5M-vX-NtV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Um-UN-AiK" secondAttribute="trailing" constant="-20" id="D9F-2G-3QV"/>
+                            <constraint firstItem="3Um-UN-AiK" firstAttribute="top" secondItem="Buf-nx-dFT" secondAttribute="bottom" constant="-20" id="HMX-g4-HVG"/>
+                            <constraint firstItem="gJp-1r-osa" firstAttribute="centerY" secondItem="dUJ-pS-vb4" secondAttribute="centerY" id="UnB-i1-cIS"/>
+                            <constraint firstItem="3Um-UN-AiK" firstAttribute="leading" secondItem="dUJ-pS-vb4" secondAttribute="leadingMargin" constant="-20" id="gbU-tV-oRy"/>
+                            <constraint firstItem="gJp-1r-osa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dUJ-pS-vb4" secondAttribute="leadingMargin" constant="22" id="jK1-ZP-IxT"/>
+                            <constraint firstItem="k8s-c0-7Wv" firstAttribute="top" secondItem="3Um-UN-AiK" secondAttribute="bottom" id="jou-jg-5jI"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -31,6 +50,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch" width="375" height="667"/>
+        <image name="LaunchBackground" width="600" height="600"/>
+        <image name="Logo" width="1000" height="1000"/>
     </resources>
 </document>
