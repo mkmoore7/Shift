@@ -423,7 +423,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginBtn:" destination="smS-Vx-g0f" eventType="touchUpInside" id="YJ5-vE-gIZ"/>
+                                    <action selector="loginBtnTouched:" destination="smS-Vx-g0f" eventType="touchUpInside" id="MYs-KH-5oP"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="T6V-6K-pm8">
@@ -453,6 +453,7 @@
                     <size key="freeformSize" width="360" height="600"/>
                     <connections>
                         <outlet property="emailText" destination="sm8-I0-MAZ" id="O71-pF-hMV"/>
+                        <outlet property="loginBtn" destination="1iT-Pc-HzH" id="Evg-jk-tJd"/>
                         <outlet property="passwordText" destination="RTh-PR-KCr" id="m0z-TK-3yy"/>
                         <outlet property="scrollView" destination="iLl-a2-YwB" id="TMR-VK-vk0"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="reveal_view" action="showViewController:sender:" id="9dO-t3-iT9"/>

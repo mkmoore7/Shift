@@ -19,6 +19,7 @@
 		2B80FABB1CC54FE8002B3D88 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABA1CC54FE8002B3D88 /* Data.swift */; };
 		2B80FABD1CC55009002B3D88 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABC1CC55009002B3D88 /* Settings.swift */; };
 		2B80FABF1CC55955002B3D88 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B80FABE1CC55955002B3D88 /* CoreMotion.framework */; };
+		5A17A31C1CC8349500A9C41F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17A31B1CC8349500A9C41F /* Config.swift */; };
 		5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A441F1CC69F2B003939EB /* LoginServices.swift */; };
 		5A8A44231CC6A203003939EB /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A44221CC6A203003939EB /* constants.swift */; };
 		5A8A44251CC6C035003939EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A44241CC6C035003939EB /* LoginViewController.swift */; };
@@ -55,6 +56,7 @@
 		2B80FABC1CC55009002B3D88 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2B80FABE1CC55955002B3D88 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4ED8B102E707EF64C4659FD3 /* Pods-Shift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shift/Pods-Shift.debug.xcconfig"; sourceTree = "<group>"; };
+		5A17A31B1CC8349500A9C41F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5A8A441F1CC69F2B003939EB /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginServices.swift; path = Shift/LoginServices.swift; sourceTree = SOURCE_ROOT; };
 		5A8A44221CC6A203003939EB /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		5A8A44241CC6C035003939EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				2B4DE9D61CADAD1100D505D9 /* Shift-Bridging-Header.h */,
 				5A8A441F1CC69F2B003939EB /* LoginServices.swift */,
 				5A8A44241CC6C035003939EB /* LoginViewController.swift */,
+				5A17A31B1CC8349500A9C41F /* Config.swift */,
 			);
 			path = Shift;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				2B80FABB1CC54FE8002B3D88 /* Data.swift in Sources */,
 				5A8A44231CC6A203003939EB /* constants.swift in Sources */,
 				2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */,
+				5A17A31C1CC8349500A9C41F /* Config.swift in Sources */,
 				5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */,
 				2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */,
 				2B80FABD1CC55009002B3D88 /* Settings.swift in Sources */,

@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Shift/Firebase.framework"
   install_framework "Pods-Shift/SCLAlertView.framework"
+  install_framework "Pods-Shift/SwiftLoader.framework"
   install_framework "Pods-Shift/SwiftValidator.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Shift/Firebase.framework"
   install_framework "Pods-Shift/SCLAlertView.framework"
+  install_framework "Pods-Shift/SwiftLoader.framework"
   install_framework "Pods-Shift/SwiftValidator.framework"
 fi
