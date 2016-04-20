@@ -9,6 +9,7 @@
 import Foundation
 import CoreMotion
 import UIKit
+import SCLAlertView
 
 class Exercises: UIViewController {
     
@@ -25,6 +26,27 @@ class Exercises: UIViewController {
     override func viewDidLoad() {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer()) //add a gesture recognizer
         
+        SCLAlertView().showInfo("How to Play ", subTitle: "Hold the phone to your chest, and shift your weight towards the target until you hear a ding.", closeButtonTitle: "Start")
+        
+        motionDataSetup()
+        
+        super.viewDidLoad()
+        
+    }
+    
+    func outputAccData(acceleration: CMAcceleration){
+        xAcc?.text = "\(acceleration.x).2fg"
+        yAcc?.text = "\(acceleration.y).2fg"
+        zAcc?.text = "\(acceleration.z).2fg"
+    }
+    
+    func outputRotData(gyro: CMRotationRate){
+        xRot?.text = "\(gyro.x).2fg"
+        yRot?.text = "\(gyro.y).2fg"
+        zRot?.text = "\(gyro.z).2fg"
+    }
+  
+    func motionDataSetup(){
         //Set Motion Properties
         motionManager.accelerometerUpdateInterval = 0.2
         motionManager.gyroUpdateInterval = 0.2
@@ -43,22 +65,6 @@ class Exercises: UIViewController {
                 print("\(NSError)")
             }
         })
-        
-        super.viewDidLoad()
-        
     }
-    
-    func outputAccData(acceleration: CMAcceleration){
-        xAcc?.text = "\(acceleration.x).2fg"
-        yAcc?.text = "\(acceleration.y).2fg"
-        zAcc?.text = "\(acceleration.z).2fg"
-    }
-    
-    func outputRotData(gyro: CMRotationRate){
-        xRot?.text = "\(gyro.x).2fg"
-        yRot?.text = "\(gyro.y).2fg"
-        zRot?.text = "\(gyro.z).2fg"
-    }
-    
     
 }
