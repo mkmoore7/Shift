@@ -23,6 +23,7 @@
 		5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A441F1CC69F2B003939EB /* LoginServices.swift */; };
 		5A8A44231CC6A203003939EB /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A44221CC6A203003939EB /* constants.swift */; };
 		5A8A44251CC6C035003939EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A44241CC6C035003939EB /* LoginViewController.swift */; };
+		5AA128551CC8A19A00E8D531 /* StatusCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA128541CC8A19A00E8D531 /* StatusCardCellView.swift */; };
 		99D478AF9B5EA9E275F58BC7 /* Pods_Shift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65C3ED63E28DCCB9B779EB2A /* Pods_Shift.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		5A8A441F1CC69F2B003939EB /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginServices.swift; path = Shift/LoginServices.swift; sourceTree = SOURCE_ROOT; };
 		5A8A44221CC6A203003939EB /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		5A8A44241CC6C035003939EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5AA128541CC8A19A00E8D531 /* StatusCardCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCardCellView.swift; sourceTree = "<group>"; };
 		65C3ED63E28DCCB9B779EB2A /* Pods_Shift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		859FA25A993C8CBCD11FA225 /* Pods-Shift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shift/Pods-Shift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 		2B4DE9B31CADAC7D00D505D9 /* Shift */ = {
 			isa = PBXGroup;
 			children = (
+				5AA128531CC8A17C00E8D531 /* Views */,
 				5ABF8B421CC8773C0038940F /* StoryBoards */,
 				5ABF8B411CC8771D0038940F /* ViewControllers */,
 				5ABF8B401CC876FC0038940F /* Helpers */,
@@ -153,6 +156,14 @@
 				859FA25A993C8CBCD11FA225 /* Pods-Shift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AA128531CC8A17C00E8D531 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AA128541CC8A19A00E8D531 /* StatusCardCellView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		5ABF8B401CC876FC0038940F /* Helpers */ = {
@@ -345,6 +356,7 @@
 				5A8A44231CC6A203003939EB /* constants.swift in Sources */,
 				5A17A3201CC867EE00A9C41F /* PerformanceViewController.swift in Sources */,
 				2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */,
+				5AA128551CC8A19A00E8D531 /* StatusCardCellView.swift in Sources */,
 				5A17A31C1CC8349500A9C41F /* Config.swift in Sources */,
 				5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */,
 				2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */,

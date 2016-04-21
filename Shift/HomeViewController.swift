@@ -8,11 +8,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UITableViewController {
 
     @IBOutlet weak var Open: UIBarButtonItem!
     
     @IBOutlet weak var label: UILabel!
+    
+    let tableArray:Array<String> = ["status_cell"]
     
     var varView = Int()
     override func viewDidLoad() {
@@ -29,6 +31,21 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    
+    override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)-> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier(tableArray[indexPath.row], forIndexPath: indexPath)
+        
+        return cell
+    }
+    
+    
+
 
 
 }

@@ -9,6 +9,7 @@ target 'Shift' do
   pod 'SCLAlertView'
   pod 'SwiftLoader'
   pod 'ionicons'
+  pod 'youtube-ios-player-helper'
 end
 
 target 'ShiftTests' do

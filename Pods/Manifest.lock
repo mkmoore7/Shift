@@ -4,6 +4,7 @@ PODS:
   - SCLAlertView (0.5.3)
   - SwiftLoader (0.2.5)
   - SwiftValidator (3.0.1)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Firebase (~> 2.5)
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - SCLAlertView
   - SwiftLoader
   - SwiftValidator (= 3.0.1)
+  - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
@@ -18,5 +20,6 @@ SPEC CHECKSUMS:
   SCLAlertView: dcd89117943cd804208645e0702a913397e5b352
   SwiftLoader: 12d7a6f661f5e9a2c9a72003e7dd6162f4ff0cc4
   SwiftValidator: c59223144754045d7691febdc3b3ecc2e73b609c
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
 COCOAPODS: 0.39.0
