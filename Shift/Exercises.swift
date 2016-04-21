@@ -13,6 +13,7 @@ import SCLAlertView
 
 class Exercises: UIViewController {
     
+    @IBOutlet weak var navigationMenu: UIBarButtonItem!
     @IBOutlet weak var xAcc: UILabel!
     @IBOutlet weak var yAcc: UILabel!
     @IBOutlet weak var zAcc: UILabel!
@@ -24,7 +25,13 @@ class Exercises: UIViewController {
     var motionManager = CMMotionManager()
     
     override func viewDidLoad() {
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer()) //add a gesture recognizer
+
+        
+        if self.revealViewController() != nil {
+            navigationMenu.target = self.revealViewController()
+            navigationMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         SCLAlertView().showInfo("How to Play ", subTitle: "Hold the phone to your chest, and shift your weight towards the target until you hear a ding.", closeButtonTitle: "Start")
         
