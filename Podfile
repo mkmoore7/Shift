@@ -8,6 +8,7 @@ target 'Shift' do
   pod 'SwiftValidator', '3.0.1'
   pod 'SCLAlertView'
   pod 'SwiftLoader'
+  pod 'ionicons'
 end
 
 target 'ShiftTests' do

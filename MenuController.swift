@@ -10,24 +10,27 @@ import Foundation
 
 class MenuController: UITableViewController {
     
-    var TableArray = [String]()
+    var tableArray : Array<String> = Config.sharedInstance.menuItems
     
     override func viewDidLoad() {
-        
-        TableArray = ["Home","Exercises","Data", "Settings", "Logout"]
-
+        self.tableView.tableFooterView = UIView(frame:CGRectZero)
     
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return TableArray.count
+        return tableArray.count
     }
     
     
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)-> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(tableArray[indexPath.row], forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = TableArray[indexPath.row]
+        cell.textLabel?.text = tableArray[indexPath.row]
+        cell.textLabel?.font = UIFont.boldSystemFontOfSize(cell.textLabel!.font.pointSize)
+        cell.textLabel?.adjustsFontSizeToFitWidth
+        
+        cell.imageView?.image = Config.sharedInstance.menuIcons.valueForKey(tableArray[indexPath.row]) as? UIImage
+        
         return cell
     }
     

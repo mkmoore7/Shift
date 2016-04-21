@@ -30,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         SwiftLoader.show(title: "Loading...", animated: true)
         loginService.authenticateUser(emailText.text!, password: passwordText.text!){ error, authData in
                 if error != nil {
+                    self.performSegueWithIdentifier("reveal_view", sender: self)
                     SwiftLoader.hide()
                     SCLAlertView().showError("Login failed!", subTitle: error!.localizedDescription)
                     
