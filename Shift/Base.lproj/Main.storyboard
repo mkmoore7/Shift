@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smS-Vx-g0f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smS-Vx-g0f">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -116,7 +116,6 @@
         <!--Navigation Controller-->
         <scene sceneID="y2y-wa-2wu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sun-Qw-0Gy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Nsj-wB-K0J" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d4Q-JD-onW">
@@ -128,6 +127,7 @@
                         <segue destination="Ww9-MI-T6r" kind="relationship" relationship="rootViewController" id="r3f-N2-odf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sun-Qw-0Gy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2191.5" y="286.5"/>
         </scene>
@@ -143,23 +143,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Kve-T1-Qwr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="673"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dZY-qw-VmB">
+                                <rect key="frame" x="-5" y="-5" width="380" height="672"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJ5-Zf-fBK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="big_white_panel" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-NH-2NA">
                                 <rect key="frame" x="10" y="72" width="351" height="363"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Grey Panel" translatesAutoresizingMaskIntoConstraints="NO" id="7z7-Po-3Pz">
                                 <rect key="frame" x="10" y="443" width="351" height="251"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sets" translatesAutoresizingMaskIntoConstraints="NO" id="Tad-o3-kTd">
-                                <rect key="frame" x="36" y="464" width="285" height="108"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cursor" translatesAutoresizingMaskIntoConstraints="NO" id="vHK-eA-7Cb">
-                                <rect key="frame" x="176" y="240" width="23" height="23"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="nys-1h-WBm">
-                                <rect key="frame" x="176" y="107" width="23" height="23"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="other_targets" translatesAutoresizingMaskIntoConstraints="NO" id="JZo-n5-46c">
                                 <rect key="frame" x="265" y="142" width="23" height="23"/>
@@ -182,18 +176,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="other_targets" translatesAutoresizingMaskIntoConstraints="NO" id="93i-Fk-0yl">
                                 <rect key="frame" x="84" y="319" width="23" height="23"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wds-SV-3Y0">
-                                <rect key="frame" x="115" y="461" width="70" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyt-K9-gky">
-                                <rect key="frame" x="280" y="455" width="90" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cursor" translatesAutoresizingMaskIntoConstraints="NO" id="SLk-Pn-7dC">
+                                <rect key="frame" x="178" y="240" width="23" height="23"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="cgJ-xY-adr">
+                                <rect key="frame" x="174" y="110" width="31" height="31"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QB-4g-bWr">
                                 <rect key="frame" x="36" y="547" width="14" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -263,12 +251,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="khU-bV-Hee">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" style="plain" id="zjH-8x-yrA"/>
+                    <navigationItem key="navigationItem" id="hNK-gL-Auq">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" style="plain" id="bpy-JY-UlW"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="navigationMenu" destination="zjH-8x-yrA" id="o6Q-rF-Qtt"/>
                         <outlet property="xAcc" destination="11c-yO-kvF" id="2Ep-rL-IAY"/>
                         <outlet property="xRot" destination="IHJ-0g-fxk" id="KFl-hu-kHe"/>
                         <outlet property="yAcc" destination="tUv-UF-wSf" id="FGR-cT-STL"/>
@@ -279,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVa-k2-Tk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2849.5" y="286.5"/>
+            <point key="canvasLocation" x="2830.5" y="286.5"/>
         </scene>
         <!--Performance-->
         <scene sceneID="0Kq-CT-2W5">
@@ -413,46 +400,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_blue" translatesAutoresizingMaskIntoConstraints="NO" id="o5W-5U-dWH">
-                                <rect key="frame" x="0.0" y="0.0" width="382" height="667"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uad-tT-8CM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="fbW-Fu-dre"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Q5I-i2-SSi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_white" translatesAutoresizingMaskIntoConstraints="NO" id="1VS-wX-MLW">
-                                <rect key="frame" x="0.0" y="72" width="375" height="257"/>
+                                <rect key="frame" x="13" y="72" width="348" height="264"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Panel_white" translatesAutoresizingMaskIntoConstraints="NO" id="vyH-f8-UzA">
-                                <rect key="frame" x="0.0" y="325" width="375" height="391"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Streak" translatesAutoresizingMaskIntoConstraints="NO" id="v60-Xe-gPA">
-                                <rect key="frame" x="117" y="254" width="149" height="58"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Welcome" translatesAutoresizingMaskIntoConstraints="NO" id="MvI-Xw-shs">
-                                <rect key="frame" x="85" y="82" width="212" height="57"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Today's Exercises" translatesAutoresizingMaskIntoConstraints="NO" id="Y9I-hG-z4p">
-                                <rect key="frame" x="20" y="345" width="202" height="63"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOC-f0-gOn">
-                                <rect key="frame" x="128" y="138" width="119" height="119"/>
-                                <state key="normal" image="grey-circle"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLi-jU-ZfV">
+                                <rect key="frame" x="-15" y="337" width="404" height="377"/>
+                                <state key="normal" image="big_white_panel"/>
+                                <connections>
+                                    <segue destination="Ww9-MI-T6r" kind="popoverPresentation" popoverAnchorView="DLi-jU-ZfV" id="ElT-N9-WYm">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="tvh-eU-oKQ">
-                                <rect key="frame" x="157" y="153" width="61" height="112"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FE-gk-uAP">
-                                <rect key="frame" x="274" y="337" width="81" height="80"/>
-                                <state key="normal" image="Go"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, John!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxW-dm-iFs">
+                                <rect key="frame" x="97" y="89" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's Exercises:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uL-Xu-TOZ">
+                                <rect key="frame" x="29" y="354" width="213" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="sPO-UK-05s">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" style="plain" id="DmH-Ui-uqT"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" style="plain" id="DmH-Ui-uqT"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -479,7 +464,7 @@
                                 <rect key="frame" x="54.5" y="299" width="252" height="30"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="smS-Vx-g0f" id="j8L-Ec-SIe"/>
                                 </connections>
@@ -543,24 +528,18 @@
         </scene>
     </scenes>
     <resources>
-        <image name="5" width="63" height="137"/>
-        <image name="Go" width="81" height="80"/>
         <image name="Grey Panel" width="350" height="377"/>
+        <image name="LaunchBackground" width="600" height="600"/>
         <image name="Logo" width="443" height="439"/>
         <image name="Menu" width="24" height="19"/>
         <image name="Panel_white" width="357" height="236"/>
-        <image name="Streak" width="171" height="53"/>
-        <image name="Today's Exercises" width="194" height="43"/>
-        <image name="Welcome" width="198" height="44"/>
-        <image name="background_blue" width="375" height="667"/>
         <image name="big_white_panel" width="350" height="377"/>
         <image name="cursor" width="31" height="31"/>
-        <image name="grey-circle" width="119" height="119"/>
         <image name="other_targets" width="31" height="31"/>
-        <image name="sets" width="271" height="84"/>
         <image name="target" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xGi-W6-vuT"/>
+        <segue reference="r3f-N2-odf"/>
     </inferredMetricsTieBreakers>
 </document>

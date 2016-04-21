@@ -219,7 +219,7 @@
 				TargetAttributes = {
 					2B4DE9B01CADAC7C00D505D9 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4DAM22374J;
+						DevelopmentTeam = E76XJ4X8BH;
 					};
 					2B4DE9C41CADAC7D00D505D9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -469,7 +469,7 @@
 				INFOPLIST_FILE = Shift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cse591.Shift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmoore.Shift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shift/Shift-Bridging-Header.h";
@@ -488,7 +488,7 @@
 				INFOPLIST_FILE = Shift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cse591.Shift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmoore.Shift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shift/Shift-Bridging-Header.h";
