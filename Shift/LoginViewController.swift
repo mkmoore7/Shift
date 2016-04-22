@@ -10,15 +10,15 @@ import Foundation
 import SCLAlertView
 import SwiftLoader
 import SwiftValidator
+import MaterialTextField
 
 class LoginViewController: UIViewController, UITextFieldDelegate, ValidationDelegate {
     
-    @IBOutlet weak var emailText: UITextField!
-    @IBOutlet weak var passwordText: UITextField!
+    
+    @IBOutlet weak var emailText: MFTextField!
+    @IBOutlet weak var passwordText: MFTextField!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var passwordErrorLabel: UILabel!
-    @IBOutlet weak var emailErrorLabel: UILabel!
     var svos :CGPoint?
     let validator = Validator()
     
@@ -26,14 +26,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate, ValidationDele
         super.viewDidLoad()
         self.svos = scrollView!.contentOffset;
         
-        validator.registerField(emailText, errorLabel: emailErrorLabel, rules: [RequiredRule(), EmailRule(message: "Invalid email")])
+        validator.registerField(emailText, rules: [RequiredRule(), EmailRule(message: "Invalid email")])
         
-        validator.registerField(passwordText, errorLabel: passwordErrorLabel, rules: [RequiredRule()])
+        validator.registerField(passwordText, rules: [RequiredRule()])
     }
     
     func validationSuccessful() {
-        emailErrorLabel?.hidden = true
-        passwordErrorLabel?.hidden = true
+        emailText?.setError(nil, animated: true)
+        passwordText?.setError(nil, animated: true)
         let boarderColor = UIColor(red: 204.0/255.0, green: 204.0/255.0, blue: 204.0/255.0, alpha:1.0).CGColor
         emailText?.layer.borderColor =  boarderColor
         passwordText?.layer.borderColor =  boarderColor
@@ -57,10 +57,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, ValidationDele
     
     func validationFailed(errors:[UITextField:ValidationError]) {
         for (field, error) in validator.errors {
-            field.layer.borderColor = UIColor.redColor().CGColor
-            field.layer.borderWidth = 1.0
-            error.errorLabel?.text = error.errorMessage
-            error.errorLabel?.hidden = false
+            let f : MFTextField = field as! MFTextField
+            f.setError(self.errorWithLocalizedDescription(error.errorMessage), animated: true)
         }
     }
     
@@ -70,6 +68,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, ValidationDele
         
         validator.validate(self)
         
+    }
+    
+    func errorWithLocalizedDescription(localizedDescription: String) -> NSError{
+        let userInfo = [NSLocalizedDescriptionKey: localizedDescription]
+        return  NSError(domain: "ShiftLogin", code: 1, userInfo: userInfo)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

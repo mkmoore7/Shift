@@ -50,8 +50,7 @@ class HomeViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0){
-            let usename = LoginServices.sharedInstance.username()
-            return "Welcome \(usename)!"
+            return "Notifications"
         }
         return "Excercises for today"
     }

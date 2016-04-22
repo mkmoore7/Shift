@@ -12,6 +12,7 @@ target 'Shift' do
   pod 'YouTubePlayer'
   pod 'SwiftySettings',  '~>0.0.3'
   pod 'SwiftyUserDefaults'
+  pod 'MaterialTextField', '~> 0.2'
 end
 
 target 'ShiftTests' do

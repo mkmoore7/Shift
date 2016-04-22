@@ -16,10 +16,16 @@ class LoginServices: NSObject{
         var firstname:String
         var lastname:String
         var lastLogin: NSDate
+        var firstName: String
+        var lastName:String
+        var emailId:String
         
         init(){
             firstname = ""
             lastname = ""
+            firstName = ""
+            lastName = ""
+            emailId = ""
             lastLogin = NSDate.init()
         }
     }
@@ -43,16 +49,30 @@ class LoginServices: NSObject{
         debugPrint(user)
     }
     
-    func createUser(email:String, password:String, onCompletion:(NSError?, NSObject?)->()){
+    private func set(email: String, firstName:String, lastName:String){
+        self.user.emailId = email
+        self.user.firstName = firstName
+        self.user.lastName = lastName
+    }
+    
+    func createUser(email:String, password:String, firstName: String, lastName: String, onCompletion:(NSError?, NSObject?)->()){
         self.firebaseRef.createUser(email, password: password,
             withValueCompletionBlock: { error, authData in
                if error != nil {
                 onCompletion(error, nil)
                   
                } else {
-                self.recordNewUser(email, firstname: "Apple", lastname: "Dump")
+                self.set(email, firstName: firstName, lastName: lastName)
+                self.recordNewUser(email, firstname: firstName, lastname: lastName)
                 self.recordLogin(email)
-                onCompletion(nil, authData)
+                self.authenticateUser(email, password: password, onCompletion: { (error, authData) in
+                    if(error != nil){
+                        onCompletion(error, nil)
+                    }else{
+                        onCompletion(nil, authData)
+                    }
+                })
+                
                }
         })
     }
@@ -91,7 +111,7 @@ class LoginServices: NSObject{
     
     func username()-> String{
         if(self.user.firstname != ""){
-            return "\(self.user.firstname) \(self.user.lastname)"
+            return "\(self.user.firstname)"
         }
         return self.email()
     }
