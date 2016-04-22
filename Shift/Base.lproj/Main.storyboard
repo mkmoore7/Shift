@@ -603,28 +603,55 @@
                                     <constraint firstAttribute="width" secondItem="T6V-6K-pm8" secondAttribute="height" multiplier="133:129" id="ooh-x6-wHd"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhn-MQ-T8L">
+                                <rect key="frame" x="55" y="228" width="251.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="R8D-ss-Gki"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.1118306135" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8c-qZ-a6X">
+                                <rect key="frame" x="54" y="281" width="251.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="2xO-gb-Hyf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="h30-Nz-tft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.1118306135" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333333333335" green="0.82352941176470584" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1iT-Pc-HzH" firstAttribute="top" secondItem="RTh-PR-KCr" secondAttribute="bottom" constant="37" id="3nD-9p-4J6"/>
                             <constraint firstAttribute="height" secondItem="T6V-6K-pm8" secondAttribute="height" multiplier="3.33:1" id="8D0-cT-fao"/>
                             <constraint firstAttribute="centerY" secondItem="T6V-6K-pm8" secondAttribute="centerY" multiplier="2.5" id="JHT-bO-hPm"/>
+                            <constraint firstItem="Uhn-MQ-T8L" firstAttribute="centerX" secondItem="iLl-a2-YwB" secondAttribute="centerX" id="Jby-gH-P5g"/>
+                            <constraint firstItem="Uhn-MQ-T8L" firstAttribute="width" secondItem="1iT-Pc-HzH" secondAttribute="width" id="KY8-yL-jKr"/>
                             <constraint firstItem="RTh-PR-KCr" firstAttribute="top" secondItem="sm8-I0-MAZ" secondAttribute="bottom" constant="23" id="PMm-dg-jjb"/>
+                            <constraint firstItem="1iT-Pc-HzH" firstAttribute="width" secondItem="D8c-qZ-a6X" secondAttribute="width" id="cFk-Pg-f1P"/>
+                            <constraint firstItem="sm8-I0-MAZ" firstAttribute="top" secondItem="Uhn-MQ-T8L" secondAttribute="bottom" constant="2" id="d00-Nr-dGI"/>
                             <constraint firstItem="RTh-PR-KCr" firstAttribute="centerX" secondItem="iLl-a2-YwB" secondAttribute="centerX" id="dcw-Mu-1he"/>
                             <constraint firstItem="sm8-I0-MAZ" firstAttribute="centerX" secondItem="iLl-a2-YwB" secondAttribute="centerX" id="dtM-pg-qOl"/>
+                            <constraint firstItem="RTh-PR-KCr" firstAttribute="top" secondItem="D8c-qZ-a6X" secondAttribute="bottom" constant="2" id="eMn-sy-ZEN"/>
                             <constraint firstItem="1iT-Pc-HzH" firstAttribute="centerX" secondItem="iLl-a2-YwB" secondAttribute="centerX" id="lGl-et-6mF"/>
                             <constraint firstItem="1iT-Pc-HzH" firstAttribute="width" secondItem="sm8-I0-MAZ" secondAttribute="width" id="lKE-6S-ycI"/>
                             <constraint firstItem="sm8-I0-MAZ" firstAttribute="width" secondItem="iLl-a2-YwB" secondAttribute="width" multiplier="0.7" id="lxe-hR-xn8"/>
                             <constraint firstItem="T6V-6K-pm8" firstAttribute="centerX" secondItem="iLl-a2-YwB" secondAttribute="centerX" id="pLG-Fs-oNw"/>
                             <constraint firstItem="sm8-I0-MAZ" firstAttribute="top" secondItem="T6V-6K-pm8" secondAttribute="bottom" constant="36" id="sso-h5-JSA"/>
                             <constraint firstItem="RTh-PR-KCr" firstAttribute="width" secondItem="sm8-I0-MAZ" secondAttribute="width" id="u54-Ii-wS5"/>
+                            <constraint firstItem="D8c-qZ-a6X" firstAttribute="centerX" secondItem="iLl-a2-YwB" secondAttribute="centerX" id="x9O-lI-5v7"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="360" height="600"/>
                     <connections>
+                        <outlet property="emailErrorLabel" destination="Uhn-MQ-T8L" id="oFg-iE-okX"/>
                         <outlet property="emailText" destination="sm8-I0-MAZ" id="O71-pF-hMV"/>
                         <outlet property="loginBtn" destination="1iT-Pc-HzH" id="Evg-jk-tJd"/>
+                        <outlet property="passwordErrorLabel" destination="D8c-qZ-a6X" id="Pwf-U3-yoW"/>
                         <outlet property="passwordText" destination="RTh-PR-KCr" id="m0z-TK-3yy"/>
                         <outlet property="scrollView" destination="iLl-a2-YwB" id="TMR-VK-vk0"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="reveal_view" action="showViewController:sender:" id="9dO-t3-iT9"/>
