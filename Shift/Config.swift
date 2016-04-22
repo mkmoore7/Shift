@@ -16,6 +16,7 @@ class Config: NSObject {
     var config : SwiftLoader.Config;
     var menuIcons: NSDictionary;
     let menuItems = ["Home","Exercises","Performance", "Settings", "Logout"]
+    let defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     let allExercises:NSDictionary = [
         "Clock Reach": [
@@ -30,7 +31,6 @@ class Config: NSObject {
         self.config =  SwiftLoader.Config();
         self.menuIcons = [:]
         
-        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if(defaults.dictionaryForKey("exercises") == nil){
         defaults.setObject(allExercises, forKey: "exercises")
         }

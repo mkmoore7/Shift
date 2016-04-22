@@ -10,6 +10,8 @@ target 'Shift' do
   pod 'SwiftLoader'
   pod 'ionicons'
   pod 'YouTubePlayer'
+  pod 'SwiftySettings',  '~>0.0.3'
+  pod 'SwiftyUserDefaults'
 end
 
 target 'ShiftTests' do

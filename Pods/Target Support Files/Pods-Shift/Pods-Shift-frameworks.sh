@@ -88,6 +88,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Shift/SCLAlertView.framework"
   install_framework "Pods-Shift/SwiftLoader.framework"
   install_framework "Pods-Shift/SwiftValidator.framework"
+  install_framework "Pods-Shift/SwiftySettings.framework"
+  install_framework "Pods-Shift/SwiftyUserDefaults.framework"
   install_framework "Pods-Shift/YouTubePlayer.framework"
   install_framework "Pods-Shift/ionicons.framework"
 fi
@@ -96,6 +98,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Shift/SCLAlertView.framework"
   install_framework "Pods-Shift/SwiftLoader.framework"
   install_framework "Pods-Shift/SwiftValidator.framework"
+  install_framework "Pods-Shift/SwiftySettings.framework"
+  install_framework "Pods-Shift/SwiftyUserDefaults.framework"
   install_framework "Pods-Shift/YouTubePlayer.framework"
   install_framework "Pods-Shift/ionicons.framework"
 fi
