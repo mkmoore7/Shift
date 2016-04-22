@@ -16,9 +16,8 @@ class HomeViewController: UITableViewController {
     @IBOutlet weak var label: UILabel!
     
     let tableArray:Array<String> = ["status_cell", "exercise_cell"]
-    let allExercises:NSDictionary = Config.sharedInstance.getExercises()
-    var exercises: Array<String> = Config.sharedInstance.getExercises().allKeys as! Array<String>
-    let videos:Array<String> = ["yi01KXc7laY", "eW0xZApmUyo"]
+    let exercises:Array<String> = Config.sharedInstance.getExercises().exercises
+    let videos:Array<String> = Config.sharedInstance.getExercises().videos
     
     var varView = Int()
     override func viewDidLoad() {
@@ -67,7 +66,7 @@ class HomeViewController: UITableViewController {
         if (indexPath.section > 0) {
             let ex: String = self.exercises[indexPath.row]
             (cell as! ExerciseCellView).nameSetup(ex)
-            (cell as! ExerciseCellView).videoSetup((self.allExercises[ex] as! NSDictionary).valueForKey("video") as! String)
+            (cell as! ExerciseCellView).videoSetup(self.videos[indexPath.row])
             
             let view = UIView(frame: CGRectMake(0, 0, cell.contentView.frame.size.width, 20))
             

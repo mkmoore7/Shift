@@ -9,8 +9,9 @@
 import Foundation
 import ionicons
 import SwiftySettings.Swift
+import SwiftyUserDefaults
 
-class AppSettingsViewController: SwiftySettingsViewController {
+class AppSettingsViewController: SwiftySettingsViewController, UITextFieldDelegate {
     var storage:SettingsStorage = SettingsStorage()
     
     @IBOutlet weak var navigationMenu: UIBarButtonItem!
@@ -24,7 +25,6 @@ class AppSettingsViewController: SwiftySettingsViewController {
         
         super.viewDidLoad()
         loadSettingsTopDown()
-
         
     }
     
@@ -33,13 +33,12 @@ class AppSettingsViewController: SwiftySettingsViewController {
         /* Top Down settings */
         settings = SwiftySettings(storage: storage, title: "shiftapp") {[
                 Section(title: "Exercises") {[
-                    Switch(key: "Cloak Reach", title: "Cloak Reach", icon: IonIcons.imageWithIcon(ion_ios_clock, iconColor: Constants.ui.complimentaryBGColor, iconSize: 20.0, imageSize: CGSizeMake(40.0, 40.0))!),
-                    Switch(key: "Side Hip Raise", title: "Side Hip Raise", icon: IonIcons.imageWithIcon(ion_ios_body, iconColor: Constants.ui.complimentaryBGColor, iconSize: 20.0, imageSize: CGSizeMake(40.0, 40.0))!)
+                    Switch(key: "Clock Reach-enable", title: "Cloak Reach", icon: IonIcons.imageWithIcon(ion_ios_clock, iconColor: Constants.ui.complimentaryBGColor, iconSize: 20.0, imageSize: CGSizeMake(40.0, 40.0))!),
+                    Switch(key: "Side Hip Raise-enable", title: "Side Hip Raise", icon: IonIcons.imageWithIcon(ion_ios_body, iconColor: Constants.ui.complimentaryBGColor, iconSize: 20.0, imageSize: CGSizeMake(40.0, 40.0))!)
                 ]},
             
                 Section(title: "Notifications") {[
                     Switch(key: "notification", title: "Exercise Notification", icon: IonIcons.imageWithIcon(ion_ios_information, iconColor: Constants.ui.complimentaryBGColor, iconSize: 20.0, imageSize: CGSizeMake(40.0, 40.0))!),
-                    TextField(key: "alarm-time", title: "Alarm Time", secureTextEntry: false),
                     Slider(key: "volume", title: "Alarm Volume",
                                     minimumValueImage: IonIcons.imageWithIcon(ion_ios_volume_low, size: 20.0, color: Constants.ui.complimentaryBGColor)!,
                                     maximumValueImage: IonIcons.imageWithIcon(ion_ios_volume_high, size: 20.0, color: Constants.ui.complimentaryBGColor)!,

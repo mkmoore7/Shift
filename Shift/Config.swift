@@ -18,36 +18,37 @@ class Config: NSObject {
     let menuItems = ["Home","Exercises","Performance", "Settings", "Logout"]
     let defaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
-    let allExercises:NSDictionary = [
-        "Clock Reach": [
-            "enabled": "true",
-            "video": "yi01KXc7laY"],
-        "Side Hip Raise":[
-            "enabled": "true",
-            "video": "eW0xZApmUyo"]
+    let allExercises:Array<String> = ["Clock Reach", "Side Hip Raise"]
+    let exerciseInfo = [
+        "Clock Reach-enable" : true,
+        "Clock Reach-video": "yi01KXc7laY",
+        "Side Hip Raise-enable": true,
+        "Side Hip Raise-video": "eW0xZApmUyo"
     ]
+
     
     private override init(){
         self.config =  SwiftLoader.Config();
         self.menuIcons = [:]
         
-        if(defaults.dictionaryForKey("exercises") == nil){
-        defaults.setObject(allExercises, forKey: "exercises")
+        if(defaults.arrayForKey("exercises") == nil){
+            defaults.setObject(allExercises, forKey: "exercises")
+            defaults.setValuesForKeysWithDictionary(exerciseInfo)
         }
     }
     
-    func getExercises() -> (NSDictionary){
+    func getExercises() -> (exercises: Array<String>, videos: Array<String>){
         let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        let exercises = defaults.dictionaryForKey("exercises")
-        var ex = exercises
-        exercises?.keys.forEach({key in
-            let e = exercises![key] as! NSDictionary
-
-            if(e.valueForKey("enabled") as! String != "true"){
-                ex?.removeValueForKey(key)
+        let exercises = defaults.arrayForKey("exercises")
+        var ex:Array<String> = []
+        var videos:Array<String> = []
+        exercises?.forEach({exercise in
+            if(defaults.valueForKey("\(exercise)-enable") as! Bool){
+                ex.append(exercise as! String)
+                videos.append(defaults.stringForKey("\(exercise)-video")!)
             }
         })
-        return ex!
+        return (ex, videos)
     }
     
     func doConfig(){
