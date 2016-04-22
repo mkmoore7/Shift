@@ -471,7 +471,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exercise_cell" rowHeight="272" id="qZV-bd-mxc" customClass="ExerciseCellView" customModule="Shift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="275" width="375" height="272"/>
+                                <rect key="frame" x="0.0" y="274.5" width="375" height="272"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qZV-bd-mxc" id="XDg-Vb-sfY">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="271.5"/>
@@ -486,9 +486,9 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-hz-QRj" customClass="YTPlayerView">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YO2-hz-QRj" customClass="YouTubePlayerView" customModule="YouTubePlayer">
                                                     <rect key="frame" x="8" y="56" width="333" height="175"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRR-xv-WCE">
                                                     <rect key="frame" x="243" y="10" width="98" height="38"/>
@@ -501,6 +501,9 @@
                                                     <state key="normal" title="Start">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="Nsj-wB-K0J" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="xXH-qN-uNX"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.92549019610000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -536,7 +539,7 @@
                                     <outlet property="cardView" destination="sWU-gI-LcO" id="a8W-Vy-Nb7"/>
                                     <outlet property="exerciseName" destination="A8u-SM-ljr" id="IuG-gq-y6p"/>
                                     <outlet property="startButton" destination="iRR-xv-WCE" id="bJj-ta-JA8"/>
-                                    <outlet property="videoPlayer" destination="YO2-hz-QRj" id="TYh-bV-vfr"/>
+                                    <outlet property="videoPlayer" destination="YO2-hz-QRj" id="KgJ-lm-71O"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -643,6 +646,7 @@
         <image name="target" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xGi-W6-vuT"/>
+        <segue reference="GZw-pN-PDI"/>
+        <segue reference="xXH-qN-uNX"/>
     </inferredMetricsTieBreakers>
 </document>

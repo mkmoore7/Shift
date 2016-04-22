@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import youtube_ios_player_helper
+import YouTubePlayer
 
 class ExerciseCellView: UITableViewCell{
     
@@ -17,7 +17,7 @@ class ExerciseCellView: UITableViewCell{
     
     @IBOutlet weak var exerciseName: UILabel!
     
-    @IBOutlet weak var videoPlayer: YTPlayerView!
+    @IBOutlet var videoPlayer: YouTubePlayerView!
     
     override func layoutSubviews() {
         self.cardViewSetup()
@@ -41,7 +41,7 @@ class ExerciseCellView: UITableViewCell{
     func videoSetup(id: String){
         self.videoPlayer!.layer.cornerRadius = 0
         self.videoPlayer!.clipsToBounds = true
-        self.videoPlayer!.loadWithVideoId(id)
+        self.videoPlayer!.loadVideoID(id)
     }
     
     

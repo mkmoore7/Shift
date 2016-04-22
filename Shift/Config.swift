@@ -17,9 +17,37 @@ class Config: NSObject {
     var menuIcons: NSDictionary;
     let menuItems = ["Home","Exercises","Performance", "Settings", "Logout"]
     
+    let allExercises:NSDictionary = [
+        "Clock Reach": [
+            "enabled": "true",
+            "video": "yi01KXc7laY"],
+        "Side Hip Raise":[
+            "enabled": "true",
+            "video": "eW0xZApmUyo"]
+    ]
+    
     private override init(){
         self.config =  SwiftLoader.Config();
         self.menuIcons = [:]
+        
+        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        if(defaults.dictionaryForKey("exercises") == nil){
+        defaults.setObject(allExercises, forKey: "exercises")
+        }
+    }
+    
+    func getExercises() -> (NSDictionary){
+        let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+        let exercises = defaults.dictionaryForKey("exercises")
+        var ex = exercises
+        exercises?.keys.forEach({key in
+            let e = exercises![key] as! NSDictionary
+
+            if(e.valueForKey("enabled") as! String != "true"){
+                ex?.removeValueForKey(key)
+            }
+        })
+        return ex!
     }
     
     func doConfig(){

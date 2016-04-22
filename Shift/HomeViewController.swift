@@ -16,8 +16,9 @@ class HomeViewController: UITableViewController {
     @IBOutlet weak var label: UILabel!
     
     let tableArray:Array<String> = ["status_cell", "exercise_cell"]
-    let execises:Array<String> = [ "Cloack Reach", "Walk"]
-    let videos:Array<String> = ["yi01KXc7laY", "yi01KXc7laY"]
+    let allExercises:NSDictionary = Config.sharedInstance.getExercises()
+    var exercises: Array<String> = Config.sharedInstance.getExercises().allKeys as! Array<String>
+    let videos:Array<String> = ["yi01KXc7laY", "eW0xZApmUyo"]
     
     var varView = Int()
     override func viewDidLoad() {
@@ -39,7 +40,7 @@ class HomeViewController: UITableViewController {
             return 1
         }
         
-        return 2
+        return exercises.count
         
     }
 
@@ -50,7 +51,8 @@ class HomeViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(section == 0){
-            return ""
+            let usename = LoginServices.sharedInstance.username()
+            return "Welcome \(usename)!"
         }
         return "Excercises for today"
     }
@@ -63,8 +65,9 @@ class HomeViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(id, forIndexPath: indexPath)
         
         if (indexPath.section > 0) {
-            (cell as! ExerciseCellView).nameSetup(self.execises[indexPath.row])
-            (cell as! ExerciseCellView).videoSetup(self.videos[indexPath.row])
+            let ex: String = self.exercises[indexPath.row]
+            (cell as! ExerciseCellView).nameSetup(ex)
+            (cell as! ExerciseCellView).videoSetup((self.allExercises[ex] as! NSDictionary).valueForKey("video") as! String)
             
             let view = UIView(frame: CGRectMake(0, 0, cell.contentView.frame.size.width, 20))
             
@@ -83,14 +86,6 @@ class HomeViewController: UITableViewController {
         return tableView.rowHeight
     }
     
-    
-    override func shouldAutorotate() -> Bool {
-        return false
-    }
-    
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return UIInterfaceOrientationMask.Portrait
-    }
     
     
 
