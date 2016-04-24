@@ -13,13 +13,10 @@ class HomeViewController: UITableViewController {
 
     @IBOutlet weak var Open: UIBarButtonItem!
     
-    @IBOutlet weak var label: UILabel!
-    
     let tableArray:Array<String> = ["status_cell", "exercise_cell"]
     let exercises:Array<String> = Config.sharedInstance.getExercises().exercises
     let videos:Array<String> = Config.sharedInstance.getExercises().videos
-    
-    var varView = Int()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

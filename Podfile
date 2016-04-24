@@ -13,6 +13,7 @@ target 'Shift' do
   pod 'SwiftySettings',  '~>0.0.3'
   pod 'SwiftyUserDefaults'
   pod 'MaterialTextField', '~> 0.2'
+  pod 'Charts'
 end
 
 target 'ShiftTests' do
