@@ -46,7 +46,6 @@ class LoginServices: NSObject{
         self.firebaseRef = Firebase(url:self.firebaseUrl as String);
         self.authData = nil
         self.user = User()
-        debugPrint(user)
     }
     
     private func set(email: String, firstName:String, lastName:String){
@@ -187,6 +186,33 @@ class LoginServices: NSObject{
     
     }
     
+    func getExerciseRecords(exercise:String, executeAfter:(Array<NSTimeInterval>, Array<Int>)->()) {
+        if(self.authData == nil){
+            return
+        }
+
+        let email = self.encodeString(self.email())
+        let _exercise = self.encodeString(exercise)
+        let ex = self.firebaseRef.childByAppendingPath("/exercises/\(_exercise)/\(email)")
+        
+        var time = Array<NSTimeInterval>()
+        var score = Array<Int>()
+        
+        ex.queryLimitedToLast(500).observeEventType(FEventType.Value, withBlock:{ snapShot in
+            if (snapShot!.childrenCount != 0){
+                let dict:NSDictionary =  snapShot.value as! NSDictionary
+                
+                for (secs, value) in (dict){
+                    time.append(NSTimeInterval(secs as! String)!)
+                    score.append(Int(value as! String)!)
+                }
+                executeAfter(time, score)
+               
+            }
+        })
+    }
+    
+    
     func lastLogin()-> NSDate{
         return self.user.lastLogin
     }
@@ -200,5 +226,7 @@ class LoginServices: NSObject{
     func setValue(value: NSObject){
         self.firebaseRef.setValue(value)
     }
+    
+    
     
 }

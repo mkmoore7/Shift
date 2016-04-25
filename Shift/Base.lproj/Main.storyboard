@@ -274,49 +274,59 @@
         <scene sceneID="0Kq-CT-2W5">
             <objects>
                 <viewController title="Performance" id="FSJ-oB-gt7" customClass="PerformanceViewController" customModule="Shift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="281" sectionHeaderHeight="18" sectionFooterHeight="18" id="UTb-vS-jPp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="314" sectionHeaderHeight="18" sectionFooterHeight="18" id="UTb-vS-jPp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.82352941180000006" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="performance-chart-cell" rowHeight="281" id="9qn-6i-JjD">
-                                <rect key="frame" x="0.0" y="113.5" width="375" height="281"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="performance-chart-cell" rowHeight="314" id="9qn-6i-JjD" customClass="PerfomanceChartCellView" customModule="Shift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="375" height="314"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9qn-6i-JjD" id="vRK-0w-5og">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="280.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="314"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIa-lH-puO">
-                                            <rect key="frame" x="13" y="0.0" width="349" height="280.5"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIa-lH-puO">
+                                            <rect key="frame" x="13" y="13" width="349" height="293"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDP-97-u7K" customClass="LineChartView" customModule="Charts">
-                                                    <rect key="frame" x="16" y="52" width="316" height="198"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mDP-97-u7K" customClass="LineChartView" customModule="Charts">
+                                                    <rect key="frame" x="10" y="66" width="329" height="208"/>
                                                     <color key="backgroundColor" red="0.97983719069999997" green="0.90477920619999996" blue="0.75665774279999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="208" id="gOR-DZ-Jcg"/>
+                                                    </constraints>
                                                 </view>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-NG-bfA" customClass="MFTextField">
-                                                    <rect key="frame" x="16" y="8" width="135" height="32.5"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="From" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-NG-bfA" customClass="MFTextField">
+                                                    <rect key="frame" x="10" y="8" width="135" height="32.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="135" id="2Ia-fa-hfO"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.38188207330000001" green="0.5" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderAnimatesOnFocus" value="YES"/>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                            <color key="value" red="0.2203415708" green="0.1220637584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
                                                             <color key="value" red="0.45620568909999998" green="0.52549019610000003" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                            <color key="value" red="0.2203415708" green="0.1220637584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="defaultPlaceholderColor">
                                                             <color key="value" red="0.38188207330000001" green="0.5" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <outlet property="delegate" destination="smS-Vx-g0f" id="9Ea-u7-ryj"/>
+                                                        <action selector="fromTextPick:" destination="9qn-6i-JjD" eventType="editingDidBegin" id="JK1-69-4TU"/>
                                                     </connections>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="To" borderStyle="roundedRect" placeholder="From" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBn-Ip-Wau" customClass="MFTextField">
-                                                    <rect key="frame" x="198" y="8" width="134" height="33"/>
-                                                    <color key="textColor" red="0.45620568909999998" green="0.52549019610000003" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBn-Ip-Wau" customClass="MFTextField">
+                                                    <rect key="frame" x="205" y="8" width="134" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="134" id="ufW-c8-Irh"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.38188207330000001" green="0.5" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
@@ -333,16 +343,38 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <outlet property="delegate" destination="smS-Vx-g0f" id="TJu-6q-NZy"/>
+                                                        <action selector="toTextPick:" destination="9qn-6i-JjD" eventType="editingDidBegin" id="Qbd-d2-5W2"/>
+                                                        <action selector="toTextPick:" destination="9qn-6i-JjD" eventType="touchDragInside" id="zgc-av-DkB"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.92549019610000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="Nd3-NG-bfA" firstAttribute="top" secondItem="IIa-lH-puO" secondAttribute="top" constant="8" id="0Li-3y-kM4"/>
+                                                <constraint firstAttribute="trailing" secondItem="mDP-97-u7K" secondAttribute="trailing" constant="10" id="3VL-xk-AvD"/>
+                                                <constraint firstItem="JBn-Ip-Wau" firstAttribute="top" secondItem="IIa-lH-puO" secondAttribute="top" constant="8" id="IGB-uc-YLF"/>
+                                                <constraint firstAttribute="trailing" secondItem="JBn-Ip-Wau" secondAttribute="trailing" constant="10" id="LMd-kU-mOU"/>
+                                                <constraint firstItem="mDP-97-u7K" firstAttribute="top" secondItem="JBn-Ip-Wau" secondAttribute="bottom" constant="25" id="WGj-of-YR5"/>
+                                                <constraint firstItem="Nd3-NG-bfA" firstAttribute="leading" secondItem="IIa-lH-puO" secondAttribute="leading" constant="10" id="uqW-yd-Ymv"/>
+                                                <constraint firstItem="mDP-97-u7K" firstAttribute="leading" secondItem="IIa-lH-puO" secondAttribute="leading" constant="10" id="xy2-pF-5td"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="IIa-lH-puO" secondAttribute="trailing" constant="5" id="1Mc-3A-CiV"/>
+                                        <constraint firstItem="IIa-lH-puO" firstAttribute="leading" secondItem="vRK-0w-5og" secondAttribute="leadingMargin" constant="5" id="A8J-av-Yh5"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IIa-lH-puO" secondAttribute="bottom" id="LIT-ZA-ICN"/>
+                                        <constraint firstItem="IIa-lH-puO" firstAttribute="top" secondItem="vRK-0w-5og" secondAttribute="topMargin" constant="5" id="Sk6-WB-dJX"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="cellView" destination="IIa-lH-puO" id="Ik9-5o-Spj"/>
+                                    <outlet property="chartView" destination="mDP-97-u7K" id="O5h-G3-rL6"/>
+                                    <outlet property="fromText" destination="Nd3-NG-bfA" id="JZq-5f-Isc"/>
+                                    <outlet property="toText" destination="JBn-Ip-Wau" id="22S-L3-rdV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>

@@ -131,5 +131,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, ValidationDel
         textField.resignFirstResponder()
     }
     
+   
     
 }

@@ -30,6 +30,10 @@ class MenuController: UITableViewController {
         cell.textLabel?.adjustsFontSizeToFitWidth
         
         cell.imageView?.image = Config.sharedInstance.menuIcons.valueForKey(tableArray[indexPath.row]) as? UIImage
+        if(indexPath.row != tableArray.count - 1){
+            cell.backgroundColor = UIColor.clearColor()
+        }
+        
         
         return cell
     }

@@ -47,18 +47,10 @@ class PerformanceViewController: UITableViewController{
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)-> UITableViewCell{
         
         let id = "performance-chart-cell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(id, forIndexPath: indexPath)
+        let cell:PerfomanceChartCellView = tableView.dequeueReusableCellWithIdentifier(id, forIndexPath: indexPath) as! PerfomanceChartCellView
         
-//        if (indexPath.section > 0) {
-//            let ex: String = self.exercises[indexPath.row]
-//            (cell as! ExerciseCellView).nameSetup(ex)
-//            (cell as! ExerciseCellView).videoSetup(self.videos[indexPath.row])
-//            
-//            let view = UIView(frame: CGRectMake(0, 0, cell.contentView.frame.size.width, 20))
-//            
-//            view.backgroundColor = UIColor.clearColor()
-//            cell.contentView.addSubview(view)
-//        }
+        cell.exercise = self.exercises[indexPath.section].stringByReplacingOccurrencesOfString(" ", withString: "-").lowercaseString
+        cell.backgroundColor = Constants.ui.backgroundColor
         
         return cell
     }

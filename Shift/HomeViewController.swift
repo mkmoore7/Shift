@@ -69,6 +69,7 @@ class HomeViewController: UITableViewController {
             view.backgroundColor = UIColor.clearColor()
             cell.contentView.addSubview(view)
         }
+        cell.backgroundColor = Constants.ui.backgroundColor
         
         return cell
     }

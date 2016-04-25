@@ -21,6 +21,7 @@
 		5A17A31C1CC8349500A9C41F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17A31B1CC8349500A9C41F /* Config.swift */; };
 		5A17A3201CC867EE00A9C41F /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17A31F1CC867EE00A9C41F /* PerformanceViewController.swift */; };
 		5A2D717F1CCAAAD90038D243 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D717E1CCAAAD90038D243 /* SignUpViewController.swift */; };
+		5A2D71901CCD64360038D243 /* PerfomanceChartCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D718F1CCD64360038D243 /* PerfomanceChartCellView.swift */; };
 		5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A441F1CC69F2B003939EB /* LoginServices.swift */; };
 		5A8A44231CC6A203003939EB /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A44221CC6A203003939EB /* constants.swift */; };
 		5A8A44251CC6C035003939EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A44241CC6C035003939EB /* LoginViewController.swift */; };
@@ -62,6 +63,7 @@
 		5A17A31B1CC8349500A9C41F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5A17A31F1CC867EE00A9C41F /* PerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
 		5A2D717E1CCAAAD90038D243 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5A2D718F1CCD64360038D243 /* PerfomanceChartCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfomanceChartCellView.swift; sourceTree = "<group>"; };
 		5A8A441F1CC69F2B003939EB /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginServices.swift; path = Shift/LoginServices.swift; sourceTree = SOURCE_ROOT; };
 		5A8A44221CC6A203003939EB /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		5A8A44241CC6C035003939EB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				5AA128541CC8A19A00E8D531 /* StatusCardCellView.swift */,
 				5AA128561CC9A1B200E8D531 /* ExerciseCellView.swift */,
+				5A2D718F1CCD64360038D243 /* PerfomanceChartCellView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				5A8A44231CC6A203003939EB /* constants.swift in Sources */,
 				5A17A3201CC867EE00A9C41F /* PerformanceViewController.swift in Sources */,
 				2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */,
+				5A2D71901CCD64360038D243 /* PerfomanceChartCellView.swift in Sources */,
 				5AA128551CC8A19A00E8D531 /* StatusCardCellView.swift in Sources */,
 				5A17A31C1CC8349500A9C41F /* Config.swift in Sources */,
 				5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */,
