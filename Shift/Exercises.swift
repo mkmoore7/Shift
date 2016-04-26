@@ -24,6 +24,11 @@ class Exercises: UIViewController {
     var motionManager = CMMotionManager()
     var accX, accY, accZ, posX, posY: SKLabelNode?
     var x, y: CGFloat?
+    var playerRestPosition:CGPoint?
+    var radius:Double?
+    var accelaration : CMAcceleration = CMAcceleration(x: 0.0,y: 0.0,z: 0.0)
+    var speed: CMAcceleration = CMAcceleration(x: 0.0,y: 0.0,z: 0.0)
+    var position: CMAcceleration = CMAcceleration(x: 0.0,y: 0.0,z: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +55,12 @@ class Exercises: UIViewController {
         
         //setup the player and targets (super gross code... but forcing it right now)
         player = skView.scene!.childNodeWithName("player") as? SKSpriteNode
+        self.playerRestPosition = player!.position
+        self.position = CMAcceleration(x: Double(self.playerRestPosition!.x), y: Double(self.playerRestPosition!.y),z: 0.0)
+        
         target0 = skView.scene!.childNodeWithName("target0") as? SKSpriteNode
+        
+        self.radius = Double(target0!.position.y - self.playerRestPosition!.y)
         target1 = skView.scene!.childNodeWithName("target1") as? SKSpriteNode
         target2 = skView.scene!.childNodeWithName("target2") as? SKSpriteNode
         target3 = skView.scene!.childNodeWithName("target3") as? SKSpriteNode
@@ -108,44 +118,83 @@ class Exercises: UIViewController {
     }
     
     func movePlayer(acc: CMAcceleration){
+//        let deltaX :Double = (acc.x - self.accelaration.x)
+//        let deltaY :Double = (acc.y - self.accelaration.y)
+//        
+//        self.accelaration.x += 2.0 * deltaX
+//        self.accelaration.y += 2.0 * deltaY
+//        
+//        self.speed.x += 2.0 * deltaX
+//        self.speed.y += 2.0 * deltaY
+//        
+//        self.position.x += 2.0 * deltaX
+//        self.position.y += 2.0 * deltaY
+//        let DT = 0.2
+//        
+//        self.position.x = self.position.x + self.speed.x * DT + 0.5 * self.accelaration.x * DT * DT
+//        self.position.y = self.position.y + self.speed.y * DT + 0.5 * self.accelaration.y * DT * DT
+//        self.speed.x = self.speed.x + self.accelaration.x * DT;
+//        self.speed.y = self.speed.y + self.accelaration.y * DT;
+//        self.accelaration.x = acc.x
+//        self.accelaration.y = acc.y
+//        
+//        if( pow((self.position.x - Double(self.playerRestPosition!.x)), 2.0) + pow(self.position.y - Double(self.playerRestPosition!.y), 2.0) <= (radius! * radius!)){
+//            self.player!.position = CGPoint(x: self.position.x,y: self.position.y)
+//        }
+//        
+        
+        
+        
+        
+     
         
         //need a bounding box
-        x = player!.position.x
-        y = player!.position.y
+        let x:Double = Double(player!.position.x) + ((acc.x - self.accelaration.x)/0.2 * 50.0)
+        let y:Double = Double(player!.position.y) + ((acc.y - self.accelaration.y)/0.2 * 50.0)
         
         //create a bounding box for the player to stay in. This should freeze it at the edges
-        if(x > 20){
-            if(x < 355){
-                if(y > 220){
-                    if(y < 585){
-                        x = x! + CGFloat(20 * acc.x)
-                        y = y! - CGFloat(20 * acc.z)
-                        
-                        player!.position = CGPoint(x: x!, y: y!)
-                        print("position changed")
-                    }
-                    else{
-                        print("top edge")
-                        y = 584
-                    }
-                    
-                }
-                else{
-                    print("bottom edge")
-                    y = 221
-                }
-                
-            }
-            else{
-                print("right edge")
-                x = 354
-            }
-            
-        }else{
-            print("left edge")
-            x = 21
-        }
         
+        if( pow((x - Double(self.playerRestPosition!.x)), 2.0) + pow(y - Double(self.playerRestPosition!.y), 2.0) <= (radius! * radius!)){
+            self.player!.position = CGPoint(x: x,y: y)
+        
+        }
+        self.accelaration.x = acc.x
+        self.accelaration.y = acc.y
+        
+        
+        
+//        if(x > 20){
+//            if(x < 355){
+//                if(y > 220){
+//                    if(y < 585){
+//                        x = x! + CGFloat(20 * acc.x)
+//                        y = y! - CGFloat(20 * acc.z)
+//                        
+//                        player!.position = CGPoint(x: x!, y: y!)
+//                        print("position changed")
+//                    }
+//                    else{
+//                        print("top edge")
+//                        y = 584
+//                    }
+//                    
+//                }
+//                else{
+//                    print("bottom edge")
+//                    y = 221
+//                }
+//                
+//            }
+//            else{
+//                print("right edge")
+//                x = 354
+//            }
+//            
+//        }else{
+//            print("left edge")
+//            x = 21
+//        }
+//        
         outputPosData()
     }
     
@@ -155,14 +204,18 @@ class Exercises: UIViewController {
         motionManager.gyroUpdateInterval = 0.2
         
         //Start Recording Data
-        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
-            
-            if( accelerometerData != nil){
-                self.outputAccData(accelerometerData!.acceleration)
+        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!) { (accelerometerData: CMAccelerometerData?, error:NSError?) -> Void in
+            if( error == nil){
+                //self.outputAccData(accelerometerData!.acceleration)
                 self.movePlayer(accelerometerData!.acceleration)
             }
-            if(NSError != nil) {
-                print("\(NSError)")
+        }
+        
+        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue()!) { [weak self](accelerometerData: CMDeviceMotion?, error:NSError?) -> () in
+            if(error != nil){
+               // self.outputAccData(accelerometerData!.gravity)
+                //self!.movePlayer(accelerometerData!.gravity.x, yVal: accelerometerData!.gravity.y)
+            
             }
         }
         motionManager.startGyroUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: { (gyroData: CMGyroData?, NSError) -> Void in
@@ -172,5 +225,10 @@ class Exercises: UIViewController {
             }
         })
     }
+    
+    deinit{
+        motionManager.stopGyroUpdates()
+    }
+    
     
 }
