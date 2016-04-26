@@ -46,7 +46,7 @@ class StatusCardCellView: UITableViewCell{
         self.userNameLabel.text? = "Welcome \(usename)!"
         let lastLoginString = NSDateFormatter.localizedStringFromDate(lastLogin, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
         self.lastLoginLabel.text? = "Last login : \(lastLoginString)"
-        self.statusMessage.text? = "Hello, you haven't done any exercises\n today"
+        //self.statusMessage.text? = "Hello, you haven't done any exercises\n today"
     }
     
     
