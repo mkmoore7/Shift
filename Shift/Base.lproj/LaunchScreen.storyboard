@@ -19,9 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-UN-AiK">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3Um-UN-AiK">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.72156862749999995" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-1r-osa">
                                 <rect key="frame" x="38" y="185" width="298" height="298"/>
@@ -50,7 +51,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchBackground" width="600" height="600"/>
-        <image name="Logo" width="443" height="439"/>
+        <image name="LaunchBackground" width="1667" height="1667"/>
+        <image name="Logo" width="440" height="432"/>
     </resources>
 </document>
