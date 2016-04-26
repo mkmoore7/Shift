@@ -15,9 +15,10 @@
 		2B4DE9CA1CADAC7D00D505D9 /* ShiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9C91CADAC7D00D505D9 /* ShiftTests.swift */; };
 		2B4DE9D81CADAD1200D505D9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9D71CADAD1200D505D9 /* SWRevealViewController.m */; };
 		2B4DE9DC1CADB32800D505D9 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DE9DB1CADB32800D505D9 /* MenuController.swift */; };
-		2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FAB81CC54F57002B3D88 /* Exercises.swift */; };
 		2B80FABD1CC55009002B3D88 /* AppSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B80FABC1CC55009002B3D88 /* AppSettingsViewController.swift */; };
 		2B80FABF1CC55955002B3D88 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B80FABE1CC55955002B3D88 /* CoreMotion.framework */; };
+		2BE760561CCEF4B4004657D0 /* Exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE760551CCEF4B4004657D0 /* Exercises.swift */; };
+		2BE760581CCEF4BA004657D0 /* ExerciseScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2BE760571CCEF4BA004657D0 /* ExerciseScene.sks */; };
 		5A17A31C1CC8349500A9C41F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17A31B1CC8349500A9C41F /* Config.swift */; };
 		5A17A3201CC867EE00A9C41F /* PerformanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A17A31F1CC867EE00A9C41F /* PerformanceViewController.swift */; };
 		5A2D717F1CCAAAD90038D243 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D717E1CCAAAD90038D243 /* SignUpViewController.swift */; };
@@ -56,9 +57,10 @@
 		2B4DE9D61CADAD1100D505D9 /* Shift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shift-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B4DE9D71CADAD1200D505D9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2B4DE9DB1CADB32800D505D9 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../MenuController.swift; sourceTree = "<group>"; };
-		2B80FAB81CC54F57002B3D88 /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
 		2B80FABC1CC55009002B3D88 /* AppSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsViewController.swift; sourceTree = "<group>"; };
 		2B80FABE1CC55955002B3D88 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		2BE760551CCEF4B4004657D0 /* Exercises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercises.swift; sourceTree = "<group>"; };
+		2BE760571CCEF4BA004657D0 /* ExerciseScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExerciseScene.sks; sourceTree = "<group>"; };
 		4ED8B102E707EF64C4659FD3 /* Pods-Shift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shift/Pods-Shift.debug.xcconfig"; sourceTree = "<group>"; };
 		5A17A31B1CC8349500A9C41F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		5A17A31F1CC867EE00A9C41F /* PerformanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceViewController.swift; sourceTree = "<group>"; };
@@ -191,8 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				5A17A31F1CC867EE00A9C41F /* PerformanceViewController.swift */,
-				2B80FAB81CC54F57002B3D88 /* Exercises.swift */,
 				5A8A44241CC6C035003939EB /* LoginViewController.swift */,
+				2BE760551CCEF4B4004657D0 /* Exercises.swift */,
+				2BE760571CCEF4BA004657D0 /* ExerciseScene.sks */,
 				5A2D717E1CCAAAD90038D243 /* SignUpViewController.swift */,
 				2B80FABC1CC55009002B3D88 /* AppSettingsViewController.swift */,
 				2B4DE9DB1CADB32800D505D9 /* MenuController.swift */,
@@ -263,7 +266,7 @@
 				TargetAttributes = {
 					2B4DE9B01CADAC7C00D505D9 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 4DAM22374J;
+						DevelopmentTeam = E76XJ4X8BH;
 					};
 					2B4DE9C41CADAC7D00D505D9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -298,6 +301,7 @@
 			files = (
 				2B4DE9BF1CADAC7D00D505D9 /* LaunchScreen.storyboard in Resources */,
 				2B4DE9BC1CADAC7D00D505D9 /* Assets.xcassets in Resources */,
+				2BE760581CCEF4BA004657D0 /* ExerciseScene.sks in Resources */,
 				2B4DE9BA1CADAC7D00D505D9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,11 +373,11 @@
 				5A8A44231CC6A203003939EB /* constants.swift in Sources */,
 				5A17A3201CC867EE00A9C41F /* PerformanceViewController.swift in Sources */,
 				2B4DE9B51CADAC7D00D505D9 /* AppDelegate.swift in Sources */,
+				2BE760561CCEF4B4004657D0 /* Exercises.swift in Sources */,
 				5A2D71901CCD64360038D243 /* PerfomanceChartCellView.swift in Sources */,
 				5AA128551CC8A19A00E8D531 /* StatusCardCellView.swift in Sources */,
 				5A17A31C1CC8349500A9C41F /* Config.swift in Sources */,
 				5A8A44201CC69F2B003939EB /* LoginServices.swift in Sources */,
-				2B80FAB91CC54F57002B3D88 /* Exercises.swift in Sources */,
 				5A2D717F1CCAAAD90038D243 /* SignUpViewController.swift in Sources */,
 				2B80FABD1CC55009002B3D88 /* AppSettingsViewController.swift in Sources */,
 				5AFF6EBC1CC9F47A00F4FFAC /* SettingsStorage.swift in Sources */,
@@ -517,7 +521,7 @@
 				INFOPLIST_FILE = Shift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cse591.Shift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmoore.Shift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shift/Shift-Bridging-Header.h";
@@ -536,7 +540,7 @@
 				INFOPLIST_FILE = Shift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cse591.Shift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmoore.Shift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shift/Shift-Bridging-Header.h";

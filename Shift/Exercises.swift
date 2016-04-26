@@ -10,49 +10,111 @@ import Foundation
 import CoreMotion
 import UIKit
 import SCLAlertView
+import SpriteKit
 
 class Exercises: UIViewController {
     
     @IBOutlet weak var navigationMenu: UIBarButtonItem!
-    @IBOutlet weak var xAcc: UILabel!
-    @IBOutlet weak var yAcc: UILabel!
-    @IBOutlet weak var zAcc: UILabel!
-    @IBOutlet weak var xRot: UILabel!
-    @IBOutlet weak var yRot: UILabel!
-    @IBOutlet weak var zRot: UILabel!
-
     
+    var player: SKSpriteNode?
+    //var targets: [SKSpriteNode] = []
+    //var dots: [SKSpriteNode] = []
+    var dot0, dot1, dot2, dot3, dot4, dot5, dot6, dot7 : SKSpriteNode?
+    var target0, target1, target2, target3, target4, target5, target6, target7 : SKSpriteNode?
     var motionManager = CMMotionManager()
+    var accX, accY, accZ, posX, posY: SKLabelNode?
     
     override func viewDidLoad() {
-
+        super.viewDidLoad()
         
+        //reveal menu controller stuff
         if self.revealViewController() != nil {
             navigationMenu.target = self.revealViewController()
             navigationMenu.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        SCLAlertView().showInfo("How to Play ", subTitle: "Hold the phone to your chest, and shift your weight towards the target until you hear a ding.", closeButtonTitle: "Start")
+        //alert that explains how the game works
+        SCLAlertView().showInfo("How to Play ", subTitle: "Hold the phone to your chest, and shift your weight towards the orange target until you hear a ding.", closeButtonTitle: "Start")
+        
+        
+        //attach the scene to the file
+        let skView = SKView(frame: self.view.frame)
+        let scene = SKScene(fileNamed: "ExerciseScene")
+        skView.presentScene(scene)
+        view.addSubview(skView)
+    
+        
+        //setup the player and targets (super gross code... but forcing it right now)
+        player = skView.scene!.childNodeWithName("player") as? SKSpriteNode
+        target0 = skView.scene!.childNodeWithName("target0") as? SKSpriteNode
+        target1 = skView.scene!.childNodeWithName("target1") as? SKSpriteNode
+        target2 = skView.scene!.childNodeWithName("target2") as? SKSpriteNode
+        target3 = skView.scene!.childNodeWithName("target3") as? SKSpriteNode
+        target4 = skView.scene!.childNodeWithName("target4") as? SKSpriteNode
+        target5 = skView.scene!.childNodeWithName("target5") as? SKSpriteNode
+        target6 = skView.scene!.childNodeWithName("target6") as? SKSpriteNode
+        target7 = skView.scene!.childNodeWithName("target7") as? SKSpriteNode
+
+        dot0 = skView.scene!.childNodeWithName("dot0") as? SKSpriteNode
+        dot1 = skView.scene!.childNodeWithName("dot1") as? SKSpriteNode
+        dot2 = skView.scene!.childNodeWithName("dot2") as? SKSpriteNode
+        dot3 = skView.scene!.childNodeWithName("dot3") as? SKSpriteNode
+        dot4 = skView.scene!.childNodeWithName("dot4") as? SKSpriteNode
+        dot5 = skView.scene!.childNodeWithName("dot5") as? SKSpriteNode
+        dot6 = skView.scene!.childNodeWithName("dot6") as? SKSpriteNode
+        dot7 = skView.scene!.childNodeWithName("dot7") as? SKSpriteNode
+        
+        target1!.hidden = true
+        target2!.hidden = true
+        target3!.hidden = true
+        target4!.hidden = true
+        target5!.hidden = true
+        target6!.hidden = true
+        target7!.hidden = true
+        dot0!.hidden = true
+
+        
+        accX = skView.scene!.childNodeWithName("accX") as? SKLabelNode
+        accY = skView.scene!.childNodeWithName("accY") as? SKLabelNode
+        accZ = skView.scene!.childNodeWithName("accZ") as? SKLabelNode
+        posX = skView.scene!.childNodeWithName("posX") as? SKLabelNode
+        posY = skView.scene!.childNodeWithName("posY") as? SKLabelNode
+        
+        //move the cursor based on acceleration values.
         
         motionDataSetup()
         
-        super.viewDidLoad()
         
     }
+
     
     func outputAccData(acceleration: CMAcceleration){
-        xAcc?.text = "\(acceleration.x).2fg"
-        yAcc?.text = "\(acceleration.y).2fg"
-        zAcc?.text = "\(acceleration.z).2fg"
+        
+        accX?.text = "\(acceleration.x).2fg"
+        accY?.text = "\(acceleration.y).2fg"
+        accZ?.text = "\(acceleration.z).2fg" //why won't this print?
+        print("Acceleration: (\(acceleration.x), \(acceleration.y), \(acceleration.z)")
     }
     
-    func outputRotData(gyro: CMRotationRate){
-        xRot?.text = "\(gyro.x).2fg"
-        yRot?.text = "\(gyro.y).2fg"
-        zRot?.text = "\(gyro.z).2fg"
+    func outputPosData(){
+        //put the position of the cursor here
+        posX?.text = "\(player!.position.x).2fg"
+        posY?.text = "\(player!.position.y).2fg"
+        print("Player Position: \(player!.position.x) , \(player!.position.y)")
     }
   
+    func movePlayer(acc: CMAcceleration){
+        
+        //need a bounding box
+        var currX = player!.position.x
+        var currY = player!.position.y
+        currX = currX - CGFloat(375 * acc.x)
+        currY = currY - CGFloat(667 * acc.y)
+
+        outputPosData()
+    }
+    
     func motionDataSetup(){
         //Set Motion Properties
         motionManager.accelerometerUpdateInterval = 0.2
@@ -61,13 +123,17 @@ class Exercises: UIViewController {
         //Start Recording Data
         motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!) { (accelerometerData: CMAccelerometerData?, NSError) -> Void in
             
-            self.outputAccData(accelerometerData!.acceleration)
+            //probably put a if statement here
+            if( accelerometerData != nil){
+                self.outputAccData(accelerometerData!.acceleration)
+                self.movePlayer(accelerometerData!.acceleration)
+            }
             if(NSError != nil) {
                 print("\(NSError)")
             }
         }
         motionManager.startGyroUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: { (gyroData: CMGyroData?, NSError) -> Void in
-            self.outputRotData(gyroData!.rotationRate)
+            //self.outputRotData(gyroData!.rotationRate)
             if (NSError != nil){
                 print("\(NSError)")
             }
