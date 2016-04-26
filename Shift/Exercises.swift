@@ -42,6 +42,8 @@ class Exercises: UIViewController {
         //attach the scene to the file
         let skView = SKView(frame: self.view.frame)
         let scene = SKScene(fileNamed: "ExerciseScene")
+        scene!.scaleMode = .AspectFit
+        
         skView.presentScene(scene)
         view.addSubview(skView)
         
